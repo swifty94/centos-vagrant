@@ -21,31 +21,11 @@ Please choose an option from the list above on a relevant setup stage.
 
 $ bash vagrant.sh
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](https://raw.githubusercontent.com/swifty94/centos-vagrant/master/img/install1.mp4)
+-----------
+![](https://raw.githubusercontent.com/swifty94/centos-vagrant/master/img/install2.png)
+-----------
+![](https://raw.githubusercontent.com/swifty94/centos-vagrant/master/img/install3.png)
+-----------
 
 # that is it, folks :)
