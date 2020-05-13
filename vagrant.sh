@@ -18,36 +18,31 @@ function pre_condition(){
         echo "Installing package $PACKAGE_NAME on CentOS"
         echo "==============================================="
         nohup sudo yum update -y > /dev/null 2>&1
-        nohup sudo yum install -y $PACKAGE_NAME > /dev/null 2>&1
-        rm nohup.out
+        nohup sudo yum install -y $PACKAGE_NAME > /dev/null 2>&1        
      elif cat /etc/*release | grep ^NAME | grep Red; then
         echo "==============================================="
         echo "Installing package $PACKAGE_NAME on RedHat"
         echo "==============================================="
         nohup sudo yum update -y > /dev/null 2>&1
-        nohup sudo yum install -y $PACKAGE_NAME > /dev/null 2>&1
-        rm nohup.out
+        nohup sudo yum install -y $PACKAGE_NAME > /dev/null 2>&1        
      elif cat /etc/*release | grep ^NAME | grep Fedora;  then
         echo "================================================" 
         echo "Installing package $PACKAGE_NAME on Fedora"
         echo "================================================"
         nohup sudo yum update -y > /dev/null 2>&1
-        nohup sudo yum install -y $PACKAGE_NAME > /dev/null 2>&1
-        rm nohup.out
+        nohup sudo yum install -y $PACKAGE_NAME > /dev/null 2>&1        
      elif cat /etc/*release | grep ^NAME | grep Ubuntu;  then
         echo "==============================================="
         echo "Installing package $PACKAGE_NAME on Ubuntu"
         echo "==============================================="
         nohup sudo apt-get update > /dev/null 2>&1
-        nohup sudo apt-get install -y $PACKAGE_NAME > /dev/null 2>&1 
-        rm nohup.out
+        nohup sudo apt-get install -y $PACKAGE_NAME > /dev/null 2>&1         
      elif cat /etc/*release | grep ^NAME | grep Debian ;  then
         echo "==============================================="
         echo "Installing package $PACKAGE_NAME on Debian"
         echo "==============================================="
         nohup sudo apt-get update > /dev/null 2>&1
-        nohup sudo apt-get install -y $PACKAGE_NAME > /dev/null 2>&1 
-        rm nohup.out
+        nohup sudo apt-get install -y $PACKAGE_NAME > /dev/null 2>&1         
      else
         echo "OS NOT DETECTED, couldn't install package $PACKAGE_NAME"
         exit 1;
@@ -58,8 +53,7 @@ function vm_up(){
     #main part goes here
     echo "==============================================="
     echo "Let me create your first Vagrant VM now..."
-    echo "==============================================="
-    sleep 5
+    echo "==============================================="    
     mkdir vagrant
     cd vagrant/
     mkdir centos_vm
